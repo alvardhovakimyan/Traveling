@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        html {
+  background:#111;
+  overflow:hidden;
+}
+
+.dialog {
+  padding:5px;
+  background:white;
+  font-family:monospace;
+  width:fit-content;
+  border-radius:5px;
+  font-size:18px;
+  position:absolute;
+}
+.dialog:after {
+  width:15px;
+  height:15px;
+  background:white;
+  content:'';
+  transform:rotate(45deg);
+  position:absolute;
+  left:10px;
+  top:70%;
+  z-index:-1;
+}
+#sceneOne {
+/*   display:none; */
+  animation:fadeIn 5s linear forwards;
+}
+@keyframes fadeIn {
+  0% { opacity:0; }
+  100% { opacity:1; }
+}
+.stars {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index:-1;
+}
+/* our Ship */
+#sceneOne #shipContain {
+  position:absolute;
+  left:101%;
+  top:80%;
+  animation:sceneOne 30s ease-in 5s forwards, outOfTheHole 5s linear 36s forwards;
+}
+.ourShip {
+  width:50px;
+  height:15px;
+  background:linear-gradient(to top, gray, #333);
+  border-radius:50%;
+  position:absolute;    
+}
+
+.ourShip:before {
+  content:'';
+  position:absolute;
+  width:30px;
+  height:10px;
+  background:red;
+  top:8px;
+  left:10px;
+  border-radius:0 0 10px 10px;
+  z-index:-1;
+  animation:glow 1.5s linear infinite;
+}
+.ourShip:after {
+  width:20px;
+  height:25px;
+  background:rgba(0,0,0,.35);
+  border:1px solid #333;
+  position:absolute;
+  border-radius:50% 50% 5px 5px;
+  content:'';
+  left:14px;
+  top:-17px;
+}
+@keyframes glow {
+  0% { background:red; box-shadow:0 1px 5px red; }
+  50% { background:gold; box-shadow:0 1px 5px gold; }
+  100% { background:red; box-shadow:0 1px 5px red; }
+}
+@keyframes sceneOne {
+  0% { top:80%; left:101%; transform:scale(3); }
+  25% { top:80%; left:50%; transform:scale(3); }
+  100% { top:300px; left:300px; transform:scale(.1); }
+}
+@keyframes outOfTheHole {
+  0% { top:300px; left:300px; transform:scale(.1); }
+  100% { top:300px; left:50%; transform:scale(1); }
+}
+/* our Ship */
+/* blackhole */
+#sceneOne #holeContain {
+  position:absolute;
+  left:200px;
+  top:200px;
+  width:200px;
+  height:200px;
+  animation:spinHole 1.5s linear 34.5s forwards, offHole 3s linear 36s forwards;
+  transform-origin:center;
+}
+.blackHole {
+  width:200px;
+  height:200px;  
+  background:black;
+  border-radius:50%;
+  box-shadow:0 0 25px 5px rgba(0,0,255,.5);
+  position:absolute;
+}
+
+@keyframes spinHole {
+  100% { transform:rotateY(980deg) scale(0); }
+}
+@keyframes offHole {
+  100% { left:-100px; opacity:0; }
+}
+.blackHole:before {
+  content:'';
+  width:1px;
+  height:100px;
+  position:absolute;
+  top:50px;
+  left:87.5px;
+  background:black;
+  border-radius:50%;
+  box-shadow:0 0 50px 100px Indigo;
+  z-index:-1;
+  animation:rotateHole 17s linear infinite;
+}
+.blackHole:after {
+  content:'';
+  width:100px;
+  height:1px;
+  position:absolute;
+  top:50%;
+  left:50px;
+  background:black;
+  border-radius:50%;
+  box-shadow:0 0 50px 100px cyan;
+  opacity:.5;
+  z-index:-1;
+  animation:rotateHole2 15s linear infinite;
+}
+@keyframes rotateHole {
+  50% { transform:rotate(180deg) scale(1.2); }
+  100% { transform:rotate(360deg) scale(1); }
+}
+@keyframes rotateHole2 {
+  50% { transform:rotate(-180deg) scale(.8); }
+  100% { transform:rotate(-360deg) scale(1); }
+}
+/* blackhole */
+
+/* scene Two */
+#sceneTwo {
+  display:none;
+}
+
+#sceneTwo #shipContain {
+  position:absolute;
+  top:300px; left:50%;
+  width:50px; height:15px;
+  animation:whoa 1s linear .5s forwards, moveHigh 1s linear 6s forwards, moveLow 1s linear 8s forwards, broken 1s linear 9.5s infinite, crash 2s linear 16s forwards, dead .1s linear 18s forwards;
+  transform-origin:center;
+}
+@keyframes whoa {
+  100% { left:40%;  }
+}
+@keyframes moveHigh {
+  0% { left:40%; }
+  100% { left:30%; top: 250px;  }
+}
+@keyframes moveLow {
+  0% { left:30%; top: 250px; }
+  100% { left:30%; top: 450px;  }
+}
+@keyframes broken {
+  0% { left:30%; top: 450px; }
+  100% {  left:30%; top: 450px; transform:rotate(720deg); }
+}
+@keyframes crash {
+  0% { left:30%; top: 450px; }
+  100% { left:45%; top: calc(100vh - 30vh);  }
+}
+@keyframes dead {
+  0% { left:45%; top: calc(100vh - 30vh); }
+  100% { left:45%; top: calc(100vh - 30vh); transform:rotate(115deg);  }
+}
+#BadshipContain {
+  position:absolute;
+  top:200px; left:101%;
+  transform:scale(5);
+  animation:reveal 5s linear .5s forwards, goAway 3s linear 10s forwards;
+}
+
+@keyframes reveal {
+  100% { left:75%; }
+}
+@keyframes goAway {
+  0% { left:75%; }
+  100% { left:75%; top:-100px; opacity:0; }
+}
+.badShip {
+  width:50px;
+  height:50px;
+  background:linear-gradient(to top, gray, #333);
+  border-radius:50% 5px 5px 50%;
+  position:absolute;    
+}
+
+.badShip:before {
+  content:'';
+  position:absolute;
+  width:10px;
+  height:40px;
+  background:red;
+  top:5px;
+  left:45px;
+  border-radius:50%;
+  z-index:-1;
+  animation:glow 1.5s linear infinite;
+}
+.badShip:after {
+  width:20px;
+  height:20px;
+  background:rgba(0,0,0,.35);
+  border:1px solid #333;
+  position:absolute;
+  border-radius:100% 3px 3px 3px;
+  content:'';
+  left:4px;
+  top:4px;
+}
+
+.laser {
+  width:1px;
+  height:1px;
+  background:transparent;
+  box-shadow:0 0 3px 1px red;
+  position:absolute;
+  top:25px;
+  left:3px;
+  z-index:-1;
+}
+.laser:nth-child(2){
+  animation:shoot 1s linear forwards; 
+}
+@keyframes shoot {
+  50% { left:-100px; width:100px }
+  99% { left:-100px; width:0px; opacity:1; }
+  100% { left:-100px; width:0px; opacity:0; }
+}
+.laser:nth-child(3){
+  animation:shoot2 1s linear 6s forwards; 
+}
+@keyframes shoot2 {
+  50% { left:-100px; width:100px }
+  99% { left:-100px; width:0px; opacity:1; }
+  100% { left:-100px; width:0px; opacity:0; }
+}
+.laser:nth-child(4){
+  animation:shoot3 1s linear 8s forwards; 
+}
+@keyframes shoot3 {
+  50% { left:-100px; width:100px; transform:rotate(15deg); }
+  99% { left:-100px; top:0px; width:0px; opacity:1; transform:rotate(15deg); }
+  100% { left:-100px; top:0px; width:0px; opacity:0; transform:rotate(15deg); }
+}
+.laser:nth-child(5){
+  animation:shoot4 1s linear 9s forwards; 
+}
+@keyframes shoot4 {
+  50% { left:-100px; width:100px; transform:rotate(-15deg); }
+  99% { left:-100px; top:50px; width:0px; opacity:1; transform:rotate(-15deg); }
+  100% { left:-100px; top:50px; width:0px; opacity:0; transform:rotate(-15deg); }
+}
+
+#planet {
+  width: 70vw;
+    height: 70vw;
+    position: absolute;
+    top: calc(100vh);
+    left: calc(30vw / 2 );
+    border-radius: 50%;
+    background: linear-gradient(to bottom, Peru, darkred);
+  animation:spinMe 10s linear infinite, showMe 5s linear 13s forwards;
+  z-index:-1;
+}
+@keyframes spinMe {
+  100% { transform:rotate(360deg); }
+}
+@keyframes showMe {
+  0% { top: calc(100vh); }
+  100% { top: calc(100vh - 35vh); }
+}
+
+/* scene Two */
+
+/* scene three */
+#sceneThree {
+  display:none;
+}
+
+#sceneThree #shipContain {
+  position:absolute;
+  width:50px; height:15px;
+  left:45%; top: calc(100vh - 30vh); transform:rotate(115deg);
+  animation:byebye 2s linear 1s forwards;
+}
+@keyframes byebye {
+  100% { opacity:0; }
+}
+
+#sceneThree #planet {
+   width: 70vw;
+    height: 70vw;
+    position: absolute;
+    top: calc(100vh - 35vh);
+    left: calc(30vw / 2 );
+    border-radius: 50%;
+    background: linear-gradient(to bottom, Peru, darkred);
+  animation:spinMe 10s linear infinite, goodBye 5s linear 19s forwards;
+  z-index:-1;
+}
+@keyframes spinMe {
+  100% { transform:rotate(360deg); }
+}
+
+@keyframes goodBye {
+  100% { top:101vh; }
+}
+
+#people {
+  position:absolute;
+  left:46%;
+  top:68%;
+  transform:scale(.1);
+  animation:astro 2s linear forwards,board 2s linear 15s forwards;
+}
+@keyframes astro {
+  100% { left:40%; transform:scale(1) rotate(-720deg); }
+}
+@keyframes board {
+  0% { left:40%; transform:scale(1) rotate(0deg); opacity:1;}
+  100% { left:33vw; transform:scale(.1) rotate(-720deg); opacity:0; }
+}
+
+.person {
+  position:relative;
+  animation:bounces .5s linear 8s infinite;
+}
+@keyframes bounces {
+  0%{ transform:scaleX(-1); }
+  50% { top:-3px; transform:scaleX(-1);}
+  100% { top:0px; transform:scaleX(-1);}
+}
+
+.head {
+  width:20px;
+  height:17px;
+  border-radius:50%;
+  background:white;
+  border:2px solid white;
+}
+.head:after {
+  width:2px;
+  height:10px;
+  border-left:2px solid gray;
+  position:absolute;
+  content:'';
+  left:10px;
+  top:22px;
+  z-index:99;
+}
+.head:before {
+  width:15px;
+  height:14px;
+  background:lightgray;
+  border-top:1px solid gray;
+  border-left:1px solid gray;
+  position:absolute;
+  content:'';
+  left:8px;
+  top:3px;
+  border-radius:50%;
+}
+.body {
+  width:10px;
+  height:20px;
+  background:white;
+  position:absolute;
+  top:18px;
+  left:7px;
+  border-radius:3px;
+}
+.body:after {
+  width:5px;
+  height:10px;
+  background:gray;
+  content:'';
+  position:absolute;
+  left:-5px;
+  top:2px;
+  border-radius:3px;
+}
+.body:before {
+  width:3px;
+  height:10px;
+  border-left:2px solid gray;
+  border-bottom:2px solid gray;
+  content:'';
+  position:absolute;
+  left:3px;
+  top:20px;
+}
+
+#aliens {
+  position:absolute;
+  left:75%;
+  top:101%;
+  animation:comeOn 5s linear forwards,goodBye2 5s linear 19s forwards;
+}
+@keyframes comeOn {
+  10% { transform:rotate(5deg) }
+  20% { transform:rotate(0deg) }
+  30% { transform:rotate(-5deg) }
+  40% { transform:rotate(0deg) }
+  50% { transform:rotate(5deg) }
+  60% { transform:rotate(0deg) }
+  70% { transform:rotate(-5deg) }
+  80% { transform:rotate(0deg) }
+  90% { transform:rotate(5deg) }
+  100% { left:55%; top:70%; transform:rotate(0deg) }
+}
+
+@keyframes goodBye2 {
+  0% { left:55%; top:70%; transform:rotate(0deg) }
+  100% { left:55%; top:101vh; transform:rotate(0deg) }
+}
+.alien {
+ width:31px;
+  height:40px;
+  background:limeGreen;
+  border-radius:35% 35% 10px 10px;
+  float:left;
+  margin-left:10px;
+  position:relative;
+  z-index:-1;
+  animation: angry .25s linear 7.5s forwards, bounce .5s linear 7.5s infinite;
+}
+@keyframes angry {
+  100% { background:red; }
+}
+@keyframes bounce {
+  50% { top:-3px; }
+  100% { top:0px; }
+}
+.alien:after {
+  width:20px;
+  height:10px;
+  content:'';
+  position:absolute;
+  left:5px;
+  top:50%;
+  box-shadow:0 1px black;
+  border-radius:50%;
+}
+.alien:before {
+  width:15px;
+  height:15px;
+  border-left:2px solid black;
+  border-right:2px solid black;
+  content:'';
+  position:absolute;
+  top:100%;
+  left:6px;
+}
+.alien:nth-child(2) {
+  margin-top:50px;
+}
+.alien:nth-child(3) {
+  margin-top:100px;
+}
+
+#hello {
+  top:62%;
+  left:40%;
+  opacity:0;
+  animation:speak 3s linear 5s forwards;
+}
+@keyframes speak {
+  0% { opacity:0; }
+  10% { opacity:1;  }
+  90% { opacity:1; }
+  100% { opacity:0; }
+}
+
+#angry {
+  top:64%;
+  left:55%;
+  opacity:0;
+  animation:speak 3s linear 7s forwards;
+}
+
+#free {
+  top: 42vh;
+  left: 50vw;
+  opacity:0;
+  animation:speak 3s linear 24s forwards;
+}
+
+#newShipContain {
+  position:absolute;
+  left:20vw;
+  top:110vh;
+  transform:rotate(-90deg);
+  animation:ship 5s ease-in 10s forwards, flyAway 2s linear 17s forwards, gone .5s linear 28s forwards;
+}
+@keyframes ship {
+  100% { left:33vw; top: 70vh; transform:rotate(0deg); }
+}
+@keyframes flyAway {
+  0% { left:33vw; top: 70vh; transform:rotate(0deg); }
+  100% { left:50vw; top: 50vh; transform:rotate(0deg); }
+}
+@keyframes gone {
+  0% { left:50vw; top: 50vh; transform:rotate(0deg); }
+  100% { left:50vw; top: 50vh; transform:rotate(0deg); opacity:0; }
+}
+.ourNewShip {
+  width:50px;
+  height:15px;
+  background:linear-gradient(to top, limeGreen, darkgreen);
+  border-radius:50%;
+  position:absolute;    
+}
+
+.ourNewShip:before {
+  content:'';
+  position:absolute;
+  width:30px;
+  height:10px;
+  background:red;
+  top:8px;
+  left:10px;
+  border-radius:0 0 10px 10px;
+  z-index:-1;
+  animation:glow 1.5s linear infinite;
+}
+.ourNewShip:after {
+  width:20px;
+  height:25px;
+  background:rgba(0,255,0,.75);
+  border:1px solid darkgreen;
+  position:absolute;
+  border-radius:50% 50% 5px 5px;
+  content:'';
+  left:14px;
+  top:-17px;
+}
+
+#deathRay {
+  width:1px;
+  height:1px;
+  background:transparent;
+  box-shadow:0 0 3px 2px dodgerBlue;
+  position:absolute;
+  top:102vh;
+  left:52vw;
+  z-index:-1;
+  animation: kill 1s linear 27s forwards;
+}
+
+@keyframes kill {
+  50% { top:50vh; height:100px }
+  99% { top:50vh; height:0px; opacity:1; }
+  100% { top:50vh; height:0px; opacity:0; }
+}
+
+#kaboom {
+  width:50px;
+  height:50px;
+  background:radial-gradient(dodgerBlue, gold, red, limegreen, darkorange, purple);
+  border-radius:50%;
+  position:absolute;
+  left:50vw;
+  top:48vh;
+  transform:scale(0);
+  animation:kaboom 1s linear 28s forwards;
+}
+@keyframes kaboom {
+  100% { transform:scale(20); opacity:0; }
+}
+
+/* scene three */
+
+#sceneFour {
+  text-align:center;
+  font-family:monospace;
+  font-size:60px;
+  line-height:90vh;
+  color:white;
+  display:none;
+  animation: done 2s linear forwards;
+  position:absolute;
+  width: 100vw;
+}
+
+@keyframes done {
+  0% { top:-90vh; }
+  100% { top:0px; }
+}
+
+#titles {
+  text-align:center;
+  font-family:monospace;
+  font-size:60px;
+  color:white;
+  position:absolute;
+  width: 100vw;
+  z-index:99;
+  margin-top:20%;
+  animation:endTitles 2s linear 7s forwards;
+}
+
+h6 {
+  font-size:24px;
+  margin:0;
+}
+
+@keyframes endTitles {
+  100% { opacity:0; }
+}
+    </style>
+    <div class="stars"></div>
+<div id="titles">
+  <strong>An Adventure in Space</strong>
+  <h6>As written by Alton, Stanley, & Tristan</h6>
+</div>
+<div id="sceneOne">  
+  <div id="holeContain">
+  <div class="blackHole"></div>
+  </div>
+  <div id="shipContain">
+    <div class="ourShip"></div>    
+  </div>
+</div>
+
+<div id="sceneTwo">
+  <div id="shipContain">
+    <div class="ourShip"></div>    
+  </div>
+  <div id="BadshipContain">
+    <div class="badShip"></div>
+    <div class="laser"></div>
+    <div class="laser"></div>
+    <div class="laser"></div>
+    <div class="laser"></div>
+  </div>
+  
+  <div id="planet"></div>
+</div>
+
+<div id="sceneThree">
+  <div id="shipContain">
+    <div class="ourShip"></div>    
+  </div>
+  
+  <div id="planet"></div>
+  <div id="people">
+    <div class="person">
+      <div class="head"></div>
+      <div class="body"></div>
+    </div>
+  </div>
+  <div id="aliens" class="">
+    <div class="alien"></div>
+    <div class="alien"></div>
+    <div class="alien"></div>
+  </div>
+  <div id="hello" class="dialog">Hi.</div>
+  <div id="angry" class="dialog">$#%^!</div>
+  <div id="free" class="dialog">Safe at last.</div>
+  
+  <div id="newShipContain">
+    <div class="ourNewShip"></div>    
+  </div>
+  <div id="deathRay"></div>
+  <div id="kaboom"></div>
+</div>
+
+<div id="sceneFour">
+  The End  
+</div>
+<script>
+    setTimeout(function(){
+  document.getElementById('sceneOne').style.display = "none"
+  document.getElementById('sceneTwo').style.display = "block"
+}, 1000*41)
+
+setTimeout(function(){
+  document.getElementById('sceneTwo').style.display = "none"
+  document.getElementById('sceneThree').style.display = "block"
+}, 1000*59)
+
+setTimeout(function(){
+  document.getElementById('sceneThree').style.display = "none"
+  document.getElementById('sceneFour').style.display = "block"
+}, 1000*90)
+</script>
+</body>
+</html>

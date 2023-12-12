@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Here</title>
+    <link rel="icon" href="./files/logo.png" />
+    <link rel="stylesheet" type="text/css" href="./css/lg.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body class="register-body">
+    <nav>
+      <a href="./index.html" class="logo">
+        <img
+          src="./files/logo.png"
+          class="logo"
+          alt="Logo"
+          title="FirstFlight Travels"
+        />
+      </a>
+
+      <ul class="navbar">
+        <li>
+          <a href="./tours.html">Տուրեր</a>
+          <a href="#">Հայաստան</a>
+          <a href="#">Մեր Մասին</a>
+        </li>
+      </ul>
+    </nav>
+    <div>
+      <section class="registration">
+        <div class="register-form">
+          <h1>login <span>Here</span></h1>
+          <form action="" onsubmit="return validateform()">
+            <input
+              type="email"
+              name="myemail"
+              placeholder="Email-Id"
+              id="email"
+              required
+            />
+            <input
+              type="password"
+              name="myname1"
+              placeholder="Password"
+              id="name"
+              required
+            />
+
+            <br />
+
+            <input type="checkbox" name="t&c" id="" checked required /> I accept
+            the Terms & Conditions. <br />
+            <br />
+            </form>
+            <a id="loginme" >
+            <button class="submitbtn" onclick="login()"/>Log In</button</a>
+          
+        </div>
+      </section>
+    </div>
+   <script type="text/javascript">
+  function login() {
+    var email = document.getElementById("email").value;
+    console.log(email)
+
+    if (email == "mery.hovhannisyan.11.04@gmail.com") {
+      document.getElementById("loginme").setAttribute("href", "./mery_profil.html");
+    } else if (email == "avahov229@gmail.com") {
+      document.getElementById("loginme").setAttribute("href", "./ava_profil.html");
+    } else if(email == "ed_arushanyan@mail.ru") {
+      document.getElementById("loginme").setAttribute("href", "./edo_profil.html");
+    }
+    else{
+      document.getElementById("loginme").setAttribute("href", "#");
+    }
+  }
+</script>
+
+  </body>
+</html>

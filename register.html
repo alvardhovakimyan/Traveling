@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Here</title>
+    <link rel="icon" href="./files/logo.png" />
+    <link rel="stylesheet" type="text/css" href="./css/rg.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body class="register-body">
+    <nav>
+      <a href="./index.html" class="logo">
+        <img
+          src="./files/logo.png"
+          class="logo"
+          alt="Logo"
+          title="FirstFlight Travels"
+        />
+      </a>
+
+      <ul class="navbar">
+        <li>
+          <a href="./tours.html">Տուրեր</a>
+          <a href="#">Հայաստան</a>
+          <a href="#">Մեր Մասին</a>
+        </li>
+      </ul>
+    </nav>
+    <div>
+      <section class="registration">
+        <div class="register-form">
+          <h1>Register <span>Here</span></h1>
+          <form action="" onsubmit="return validateform()">
+            <input
+              type="text"
+              name="myname1"
+              placeholder="Name"
+              id="name"
+              required
+            />
+            <input
+              type="email"
+              name="myemail"
+              placeholder="Email-Id"
+              id=""
+              required
+            />
+            <input
+              type="tel"
+              name="myphone"
+              placeholder="Phone No."
+              id="phonenum"
+              required
+            />
+            <input
+              type="password"
+              name="myage"
+              placeholder="Password"
+              id=""
+              required
+            />
+
+            <br />
+
+            <input type="checkbox" name="t&c" id="" checked required /> I accept
+            the Terms & Conditions. <br />
+            <br />
+            <input type="submit" value="Submit" class="submitbtn" />
+            
+          </form>
+          <a href="./login.html"><input type="submit" value="login" class="submitbtn"  /></a>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

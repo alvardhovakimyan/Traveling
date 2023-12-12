@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firstflight Travels</title>
+    <link rel="icon" href="./files/logo.png" />
+    <link rel="stylesheet" type="text/css" href="./css/tour.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <script src="./script1.js"></script>
+
+  </head>
+  <body>
+    <!--  Video & Header -->
+
+    <div class="banner">
+      <video
+        src="./files/bgvid.mp4"
+        type="video/mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+
+      <!-- Header -->
+
+      <div class="content" id="home">
+        <nav>
+          <a href="./index.html" class="logo">
+            <img
+              src="./files/logo.png"
+              class="logo"
+              alt="Logo"
+              title="FirstFlight Travels"
+            />
+          </a>
+          <ul class="navbar">
+            <li>
+              <a href="#">Տուրեր</a>
+              <a href="#">Հայաստան</a>
+              <a href="#">Մեր Մասին</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="title">
+          <h1>Կովկասյան Ճամփորդություններ</h1>
+          <p>
+            Plan your trip with us and travel around the world with the most
+            affordable packages!
+          </p>
+          <a href="./register.html" class="button">Գրանցվել</a>
+        </div>
+      </div>
+    </div><section id="pathContent">
+      <!-- Content for selected travel path will be displayed here -->
+  </section>
+
+  <section id="bookingForm">
+      <h2>Plan Your Trip</h2>
+      <form id="tripForm">
+          <label for="departure">Departure:</label>
+          <input type="text" id="departure" name="departure" required>
+          <!-- <select id="departure" name="departure">
+            <option value="family">Վանաձոր</option>
+            <option value="large-group">Երևան</option>
+            <option value="small-group">Գյումրի</option>
+        </select> -->
+
+          <label for="destination">Destination:</label>
+          <input type="text" id="destination" name="destination" required>
+          <!-- <select id="destination" name="destination">
+            <option value="family">Երևան</option>
+            <option value="large-group">Վանաձոր</option>
+            <option value="small-group">Գյումրի</option>
+        </select> -->
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required>
+          
+
+          <label for="package">Select a Package:</label>
+          <select id="package1" name="package">
+              <option value="family">Family Tour</option>
+              <option value="large-group">Large Group Tour</option>
+              <option value="small-group">Small Group Tour</option>
+          </select>
+      </form>
+      <a >
+      <button  onclick="a()">Submit</button></a>
+  </section>
+  <section class="newOffers" id="patet">
+      <h2>New Offers</h2>
+      <section class="package" id="package">
+        <div class="package-title">
+          <h2>Առաջարկ 1 ։ 500$</h2>
+        </div>
+  
+        <div class="package-content">
+  
+          <div class="box">
+            <div class="image">
+              <img src="./files/photo_5258243515085870027_y.jpg" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Արագած լեռ</h4>
+                <ul class="pac-details">
+                  <li>Արագած լեռան արևմտյան
+                    լանջին, Արտաշավան գյուղում,
+                    տեղակայված է հայկական
+                    այբուբենի եզակի հուշարձան:
+                    Քանդակագործական այս շքեղ
+                    աշխատանքը գտնվում է անմիջապես
+                    բաց երկնքի տակ և ներառում է
+                    39 տառերի զարդաքանդակներ։
+                    Համալիրի բոլոր տարրերը
+                    քանդակվել են տուֆից:
+                    Հայոց գրերը ստեղծել է
+                    Մեսրոպ Մաշտոցը 405 թ։
+                    Համալիրը կառուցվել է
+                    2005 թվականին՝ հայոց 
+                    գրերի ստեղծման 1600-
+                    ամյակի առթիվ։</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="box">
+            <div class="image">
+              <img src="./files/photo_5258243515085870000_y.jpg" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Օլդ Դիլիջան</h4>
+                <ul class="pac-details">
+                  <li>Անցյալ դարաշրջանի
+                    ոճով և ճարտարապետությամբ
+                    կառուցված փողոցը հայտնի
+                    է նաև Թուֆենկյան անունով:
+                    Այստեղ մեծացած և ապրած
+                    բնակիչներից մեկի թոռան
+                    թոռը պատմում է, որ
+                    տատից լսել է, թե
+                    ինչքան հյուրասեր և
+                    բարի մարդիկ են ժամանակին
+                    ապրել այս փողոցի տնակներում:</li>
+                 
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="box">
+            <div class="image">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZf89EgI-NZzhpLMI7QQRuKKM0C8x1Sa5ctDMHtmIMRyZjG44&s" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Երևան</h4>
+                <ul class="pac-details">
+                  <li>Երևանն աշխարհի հնագույն քաղաքներից է։ Հնագիտական պեղումներով պարզվել է, որ մարդն այստեղ բնակվել է տասնյակ հազարավոր տարիներ առաջ։ Քաղաքի տարածքում տարբեր ժամանակաշրջաններում առաջացել և զանազան պատճառներով կործանվել են բազմաթիվ բնակավայրեր։ Ժամանակագրական առումով՝ քաղաքի տարածքի հնագույն բնակավայրը Երևանյան կամ Հրազդան-1 քարայրն է (Երևանյան լճի մոտ՝ Հրազդան գետի ձախ ափին, ներկայումս ԱՄՆ դեսպանատան տարածքում), որի հնագույն՝ ստորին շերտը (4–5 մշակութային շերտ) թվագրվում է մուստերյան շրջանով (100–35 հազարամյակ առաջ)։ Ընդհանուր առմամբ Հրազդանի կիրճում քարայրների թիվը մոտ հարյուր է։ Որպես հին բնակավայր հայտնի է նաև Շենգավիթը. այստեղ մարդիկ բնակություն են հաստատել 5–6 հազար տարի առաջ։</li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="package" id="package2">
+        <div class="package-title">
+          <h2>Առաջարկ 2  ։ 200$</h2>
+        </div>
+  
+        <div class="package-content">
+  
+          <div class="box">
+            <div class="image">
+              <img src="./files/photo_5258243515085870005_y.jpg" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Արայի լեռ</h4>
+                <ul class="pac-details">
+                  <li>Արայի լեռ հանգած հրաբուխը
+                    գտնվում է Արագածի հարավ-
+                    արևելքում՝ Քասաղ և
+                    Հրազդան գետերի միջև:
+                    Հվ-արմ.-ում կա
+                    բնական պատռվածք:
+                    Կազմված է նեոգենի հրաբխային
+                    ապարներից:Ըստ ավանդության,
+                    լեռը կոչվել է Արա Գեղեցիկ
+                    արքայի անունով:Համաձայն 
+                    լեգենդի` Արայի լեռը դա
+                    հենց Արա Գեղեցիկի մարմինն
+                    է, որն ընկել էր ճակատամարտի
+                    ժամանակ: Հեռվից այն իրոք
+                    նմանվում է, ձեռքերը կրծքին
+                    դրած, պառկած մարդու:</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="box">
+            <div class="image">
+              <img src="./files/photo_5258243515085869998_x.jpg" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Պարզ լիճ</h4>
+                <ul class="pac-details">
+                  <li>Պարզ լիճը աղբյուրներից
+                    սկսվող, հոսք ունեցող
+                    լիճ է։ Լճի ջուրը 
+                    թափանցիկ է, կանաչավուն
+                    երանգով: Մոտակայքում
+                    սաղարթապատ անտառի 
+                    հիասքանչ արտացոլանքը 
+                    զարդարում է լճի մակերևույթը:
+                    Հաճելի կլիմայական պայմանների 
+                    շնորհիվ տուրիստական բարձր
+                    սեզոնը Հայաստանում 
+                    բավականին երկար է տևում:</li>
+                 
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="box">
+            <div class="image">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZf89EgI-NZzhpLMI7QQRuKKM0C8x1Sa5ctDMHtmIMRyZjG44&s" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Երևան</h4>
+                <ul class="pac-details">
+                  <li>Երևանն աշխարհի հնագույն քաղաքներից է։ Հնագիտական պեղումներով պարզվել է, որ մարդն այստեղ բնակվել է տասնյակ հազարավոր տարիներ առաջ։ Քաղաքի տարածքում տարբեր ժամանակաշրջաններում առաջացել և զանազան պատճառներով կործանվել են բազմաթիվ բնակավայրեր։ Ժամանակագրական առումով՝ քաղաքի տարածքի հնագույն բնակավայրը Երևանյան կամ Հրազդան-1 քարայրն է (Երևանյան լճի մոտ՝ Հրազդան գետի ձախ ափին, ներկայումս ԱՄՆ դեսպանատան տարածքում), որի հնագույն՝ ստորին շերտը (4–5 մշակութային շերտ) թվագրվում է մուստերյան շրջանով (100–35 հազարամյակ առաջ)։ Ընդհանուր առմամբ Հրազդանի կիրճում քարայրների թիվը մոտ հարյուր է։ Որպես հին բնակավայր հայտնի է նաև Շենգավիթը. այստեղ մարդիկ բնակություն են հաստատել 5–6 հազար տարի առաջ։</li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="package" id="package3">
+        <div class="package-title">
+          <h2>Առաջարկ 3  ։ 300$</h2>
+        </div>
+  
+        <div class="package-content">
+  
+          <div class="box">
+            <div class="image">
+              <img src="./files/photo_5258243515085870004_y.jpg" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Աստվածընկալի վանական համալիր</h4>
+                <ul class="pac-details">
+                  <li>Աստվածընկալի վանական համալիրը գտնվում է Քասաղ գետի կիրճի աջ ափի իջվածքում, գետի աջակողմյան եռանկյունաձև, բարձր բլրի վրա։Աստվածընկալի անունն առաջացել է վանքում պահվող «Աստվածընկալ Սուրբ Խաչ»-ի անունից։</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="box">
+            <div class="image">
+              <img src="./files/photo_5258243515085870007_y.jpg" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Հայոց գրերի հուշարձան</h4>
+                <ul class="pac-details">
+                  <li>Արագած լեռան արևմտյան
+                    լանջին, Արտաշավան գյուղում,
+                    տեղակայված է հայկական
+                    այբուբենի եզակի հուշարձան:
+                    Քանդակագործական այս շքեղ
+                    աշխատանքը գտնվում է անմիջապես
+                    բաց երկնքի տակ և ներառում է
+                    39 տառերի զարդաքանդակներ։
+                    Համալիրի բոլոր տարրերը
+                    քանդակվել են տուֆից:
+                    Հայոց գրերը ստեղծել է
+                    Մեսրոպ Մաշտոցը 405 թ։
+                    Համալիրը կառուցվել է
+                    2005 թվականին՝ հայոց 
+                    գրերի ստեղծման 1600-
+                    ամյակի առթիվ։</li>
+                 
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="box">
+            <div class="image">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZf89EgI-NZzhpLMI7QQRuKKM0C8x1Sa5ctDMHtmIMRyZjG44&s" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Երևան</h4>
+                <ul class="pac-details">
+                  <li>Երևանն աշխարհի հնագույն քաղաքներից է։ Հնագիտական պեղումներով պարզվել է, որ մարդն այստեղ բնակվել է տասնյակ հազարավոր տարիներ առաջ։ Քաղաքի տարածքում տարբեր ժամանակաշրջաններում առաջացել և զանազան պատճառներով կործանվել են բազմաթիվ բնակավայրեր։ Ժամանակագրական առումով՝ քաղաքի տարածքի հնագույն բնակավայրը Երևանյան կամ Հրազդան-1 քարայրն է (Երևանյան լճի մոտ՝ Հրազդան գետի ձախ ափին, ներկայումս ԱՄՆ դեսպանատան տարածքում), որի հնագույն՝ ստորին շերտը (4–5 մշակութային շերտ) թվագրվում է մուստերյան շրջանով (100–35 հազարամյակ առաջ)։ Ընդհանուր առմամբ Հրազդանի կիրճում քարայրների թիվը մոտ հարյուր է։ Որպես հին բնակավայր հայտնի է նաև Շենգավիթը. այստեղ մարդիկ բնակություն են հաստատել 5–6 հազար տարի առաջ։</li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="package" id="package22">
+        <div class="package-title">
+          <h2>Առաջարկ 1 ։ 400$</h2>
+        </div>
+  
+        <div class="package-content">
+          <div class="box">
+            <div class="image">
+              <img src="./files/photo_5235767891096357914_y.jpg" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Չիչխանավանք</h4>
+                <ul class="pac-details">
+                  <li>Չիչխանավանքը գտնվում է
+                    Լոռու մարզում։ Եկեղեցու ստույգ
+                    անունը հայտնի չէ և Չիչխանավանք
+                    է կոչվում ժողովրդի լեզվով:
+                    Եկեղեցու մասին պատմագրական
+                    տեղեկություններ գրեթե չեն պահպանվել:
+                    Լինելով բլրի ստորոտում` եկեղեցին
+                    գրեթե հիմնովին ավերվել է 1926թ
+                    Գյումրու երկրաշարժից:</li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="box">
+            <div class="image">
+              <img src="./files/photo_5235767891096357918_y.jpg" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Սուրբ Հովհաննես մատուռ</h4>
+                <ul class="pac-details">
+                  <li>2157 մետր բարձրության վրա գտնվող Ղալթախչիի Սուրբ Հովհաննես մատուռի մասին պտտվող լեգենդներն ու պատմվող պատմություններն օր օրի ավելանում ու ձնագնդիկի էֆեկտով մեծանում են: Սրբի հրաշագործ ուժի, իրականացված նպատակների, բուժված հիվանդների ու հղիացած կանանց մասին պատմությունները շատ են: Մարդկանց հոսքը մատուռ չի դադարում</li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="box">
+            <div class="image">
+              <img src="https://positiveday.am/_dr/0/21222055.jpg" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Գյումրի</h4>
+                <ul class="pac-details">
+                  <li>Բնակավայրի անունն ի սկզբանե եղել է Կումայրի, հետագայում՝ մինչև 1840 թվականը՝ Գյումրի։ Ռուսական կայսրության տիրապետության ժամանակաշրջանում՝ 1840-1924 թվականներին, այն վերանվանվել է Ալեքսանդրապոլ։ Խորհրդային Միության ժամանակաշրջանում՝ 1924-1990 թվականներին, քաղաքը վերանվանվել է Լենինական։ 1990-1992 թվականներին կրկին ստացել է հին անունը՝ Կումայրի, այնուհետև վերանվանվել Գյումրի։</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </section>
+      <section class="package" id="package23">
+        <div class="package-title">
+          <h2>Առաջարկ 2 ։ 350$</h2>
+        </div>
+  
+        <div class="package-content">
+          <div class="box">
+            <div class="image">
+              <img src="./files/photo_5258243515085869992_x.jpg" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Մինաս Ավետիսյանի թանգարան</h4>
+                <ul class="pac-details">
+                  <li>Մինաս Ավետիսյանի թանգարանը հիմնադրվել է 1982 թվականին՝ նկարչի ծննդավայր Ջաջուռ գյուղում: 1988 թ. երկրաշարժից շենքն ավերվել է: Թանգարանը վերաբացվել է 2003 թ. </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="box">
+            <div class="image">
+              <img src="./files/photo_5235767891096357920_m.jpg" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Ջաջուռի վանք</h4>
+                <ul class="pac-details">
+                  <li>Ջաջուռ գյուղը հիմնադրվելէ
+                    1828-29 թթ.: 1910-11 թթ.
+                    Արդար Մանուկը, մեծանուն 
+                    նկարիչ Մինաս Ավետիսյանի հոր՝
+                    Կարապետի և այլ ջաջուռցիների
+                    աջակցությամբ, կառուցում է 
+                    գյուղի միանավ եկեղեցին՝
+                    քառանկյուն հատակագծով:
+                    Թաղածածկ տանիքը ժամանակի
+                    ընթացքում քանդվել է և 
+                    փոխարինվել փայտյա տանիքով:
+                    Միակ մուտքն արևմտյան կողմից
+                    է: Ունեցել է զանգակատուն,
+                    որը 1988 թ. ահեղ երկրաշարժից 
+                    քանդվել է:</li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="box">
+            <div class="image">
+              <img src="https://positiveday.am/_dr/0/21222055.jpg" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Գյումրի</h4>
+                <ul class="pac-details">
+                  <li>Բնակավայրի անունն ի սկզբանե եղել է Կումայրի, հետագայում՝ մինչև 1840 թվականը՝ Գյումրի։ Ռուսական կայսրության տիրապետության ժամանակաշրջանում՝ 1840-1924 թվականներին, այն վերանվանվել է Ալեքսանդրապոլ։ Խորհրդային Միության ժամանակաշրջանում՝ 1924-1990 թվականներին, քաղաքը վերանվանվել է Լենինական։ 1990-1992 թվականներին կրկին ստացել է հին անունը՝ Կումայրի, այնուհետև վերանվանվել Գյումրի։</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </section>
+      <section class="package" id="package23">
+        <div class="package-title">
+          <h2>Առաջարկ 3 ։ 350$</h2>
+        </div>
+  
+        <div class="package-content">
+          <div class="box">
+            <div class="image">
+              <img src="./files/images (18).jfif" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Ջարդի ձոր</h4>
+                <ul class="pac-details">
+                  <li>Շիրակի մարզի Ջաջուռ 
+                    գյուղից 3 կմ հեռու Հերհերի
+                    ձորն է։Այդ ձորը շատերին 
+                    հայտնի է «Ջարդի ձոր» 
+                    անվանումով: Սա ներկայիս 
+                    ՀՀ տարածքում միակ տեղն է,
+                    որտեղ թուրքերի կողմից 
+                    իրականացվել են հայերի
+                    զանգվածային ջարդեր:
+                    Մինչև հիմա այդտեղ 
+                    հողը փորելիս կարելի է
+                    հանդիպել մարդկային 
+                    ոսկորների և կմախքների:
+                    Հերհերի ձորը յուրօրինակ 
+                    հուշարձան է, որը կենդանի
+                    վկայությամբ խորհրդանշում 
+                    է 20-րդ դարի սկզբին
+                    Հայոց ցեղասպանության փաստը: </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="box">
+            <div class="image">
+              <img src="./files/sariar.jpg" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Սուրբ Խաչ</h4>
+                <ul class="pac-details">
+                  <li>Մեծ Սարիարում կա
+                    Սուրբ Նշան (Սուրբ Խաչ) 
+                    եկեղեցի (1907 թ.)։ 
+                    Գյուղում կա նաև «Գրիգոր
+                    Ավետարան» անունով մատուռ։</li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="box">
+            <div class="image">
+              <img src="https://positiveday.am/_dr/0/21222055.jpg" alt="" />
+            </div>
+  
+            <div class="dest-content">
+              <div class="location">
+                <h4>Գյումրի</h4>
+                <ul class="pac-details">
+                  <li>Բնակավայրի անունն ի սկզբանե եղել է Կումայրի, հետագայում՝ մինչև 1840 թվականը՝ Գյումրի։ Ռուսական կայսրության տիրապետության ժամանակաշրջանում՝ 1840-1924 թվականներին, այն վերանվանվել է Ալեքսանդրապոլ։ Խորհրդային Միության ժամանակաշրջանում՝ 1924-1990 թվականներին, քաղաքը վերանվանվել է Լենինական։ 1990-1992 թվականներին կրկին ստացել է հին անունը՝ Կումայրի, այնուհետև վերանվանվել Գյումրի։</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </section>
+      </div>
+      <!-- Display new travel offers here -->
+  </section>
+</main>
+
+<footer>
+  <!-- Footer content goes here -->
+
+     <!-- Footer -->
+
+     <section class="footer">
+      <div class="foot">
+        <div class="footer-content">
+          <div class="footlinks">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="./register.html">Գրանցվել</a></li>
+              <li><a href="./about.html">Մեր Մասին</a></li>
+            </ul>
+          </div>
+
+          <div class="footlinks">
+            <h4>Connect</h4>
+            <div class="social">
+              <a
+                href="https://www.facebook.com/mohd.rahil.blogger"
+                target="_blank"
+                ><i class="bx bxl-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/mohdrahil101" target="_blank"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+              <a href="https://www.twitter.com/mohdrahil101" target="_blank"
+                ><i class="bx bxl-twitter"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/mohdrahil101" target="_blank"
+                ><i class="bx bxl-linkedin"></i
+              ></a>
+              <a href="https://www.youtube.com/techdollarz" target="_blank"
+                ><i class="bx bxl-youtube"></i
+              ></a>
+              <a href="https://www.mohdrahil.wordpress.com" target="_blank"
+                ><i class="bx bxl-wordpress"></i
+              ></a>
+              <a href="https://www.github.com/mohdrahil101" target="_blank"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="end">
+        <p>Պատրաստվեց © 2023</p>
+      </div>
+    </section>
+    </footer>
+</body>
